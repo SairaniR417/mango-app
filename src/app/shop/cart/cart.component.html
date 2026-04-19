@@ -31,7 +31,7 @@
       <div class="item-actions">
         <!-- Total price per item -->
         <span class="item-price">
-          ₹{{ item.price * item.weight }}
+          ₹{{ item.pricePerKg * item.weight }}
         </span>
 
         <button class="remove-btn" (click)="cart.remove(i)">✖</button>

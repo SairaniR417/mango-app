@@ -35,6 +35,6 @@ export class CheckoutComponent {
   }
 
   totalAmount(): number {
-    return this.cart.get().reduce((s, i) => s + i.price, 0);
+    return this.cart.get().reduce((s, i) => s + i.pricePerKg * i.weight, 0);
   }
 }

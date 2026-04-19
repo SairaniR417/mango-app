@@ -32,20 +32,20 @@ export class ProductListComponent implements OnInit {
   }
 
   add(item: any) {
-    const itemToAdd = {
-      ...item,
-      price: item.basePrice * item.selectedWeight, // Calculate modified price
+    this.cart.add({
+      name: item.name,
+      pricePerKg: item.basePrice,
       weight: item.selectedWeight
-    };
-    this.cart.add(itemToAdd);
+    });
   }
-
   filteredProducts() {
     if (!this.searchText) return this.products;
 
+    const text = this.searchText.toLowerCase();
+
     return this.products.filter(p =>
-      p.name.toLowerCase().includes(this.searchText.toLowerCase()) ||
-      (p.variety || '').toLowerCase().includes(this.searchText.toLowerCase())
+      p.name.toLowerCase().includes(text) ||
+      (p.variety || '').toLowerCase().includes(text)
     );
   }
 }
