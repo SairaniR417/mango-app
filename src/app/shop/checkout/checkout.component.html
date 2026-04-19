@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h2 class="section-title">📦 Checkout</h2>
+
+  <div class="checkout-form card">
+
+    <div class="input-group">
+      <label for="co-name">Your Name</label>
+      <input id="co-name" class="input" [(ngModel)]="name" placeholder="e.g. Ravi Kumar" />
+    </div>
+
+    <div class="input-group">
+      <label for="co-phone">Phone Number</label>
+      <input id="co-phone" class="input" [(ngModel)]="phone" placeholder="+91 99999 99999" type="tel" />
+    </div>
+
+    <div class="input-group">
+      <label for="co-address">Delivery Address</label>
+      <textarea id="co-address" class="input" [(ngModel)]="address" placeholder="Door No, Street, City, Pincode" rows="3"></textarea>
+    </div>
+
+  </div>
+
+  <div class="order-summary card">
+    <p class="summary-label">Order Summary</p>
+    <div class="summary-total">
+      <span>Total</span>
+      <span class="total-val">₹{{ totalAmount() }}</span>
+    </div>
+  </div>
+
+  <button class="btn-primary" (click)="order()">
+    🥭 Place Order
+  </button>
+
+</div>

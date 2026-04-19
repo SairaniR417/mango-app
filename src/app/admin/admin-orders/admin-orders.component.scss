@@ -1,0 +1,139 @@
+/* ── Admin Orders Page ─────────────────── */
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+
+  .empty-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  p { color: #888; font-size: 1rem; }
+}
+
+.order-card {
+  margin-bottom: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Header Row */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.customer-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+
+.customer-phone {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Status Badge */
+.order-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-transform: capitalize;
+
+  &.status-placed {
+    background: #fff3cd;
+    color: #c47200;
+  }
+  &.status-packed {
+    background: #e0f0ff;
+    color: #1565c0;
+  }
+  &.status-delivered {
+    background: #e8f5e9;
+    color: #2e7d32;
+  }
+}
+
+/* Items */
+.order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.item-chip {
+  background: rgba(245, 166, 35, 0.12);
+  border: 1px solid rgba(245, 166, 35, 0.25);
+  color: #a07000;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Address */
+.order-address {
+  font-size: 0.84rem;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Footer */
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 6px;
+  border-top: 1px solid rgba(245, 166, 35, 0.15);
+}
+
+.order-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c47200;
+}
+
+.action-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover { transform: translateY(-1px); }
+  &:active { transform: scale(0.96); }
+
+  &.packed {
+    background: #e0f0ff;
+    color: #1565c0;
+  }
+
+  &.delivered {
+    background: linear-gradient(135deg, #f5a623, #e08900);
+    color: #fff;
+    box-shadow: 0 3px 10px rgba(240,140,0,0.3);
+  }
+}

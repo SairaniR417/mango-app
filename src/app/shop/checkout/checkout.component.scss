@@ -1,0 +1,53 @@
+/* ── Checkout Page ──────────────────────── */
+
+.checkout-form {
+  margin-bottom: 14px;
+
+  .input-group {
+    margin-bottom: 1.1rem;
+
+    &:last-child { margin-bottom: 0; }
+
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+
+    textarea.input {
+      resize: vertical;
+      min-height: 80px;
+      line-height: 1.5;
+    }
+  }
+}
+
+.order-summary {
+  margin-bottom: 16px;
+
+  .summary-label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+
+    .total-val {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #c47200;
+    }
+  }
+}

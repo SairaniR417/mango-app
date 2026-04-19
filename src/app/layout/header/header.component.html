@@ -1,0 +1,14 @@
+<header class="header">
+
+    <!-- Profile -->
+    <div class="left" (click)="goToProfile()">👤</div>
+
+    <!-- Title -->
+    <div class="center" (click)="goToProduct()">🥭 Mango</div>
+
+    <!-- Cart -->
+    <div class="right" (click)="goToCart()">
+        🛒 <span *ngIf="cart.get().length">{{cart.get().length}}</span>
+    </div>
+
+</header>

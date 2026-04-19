@@ -1,0 +1,11 @@
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  z-index: 1000;
+}

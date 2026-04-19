@@ -1,0 +1,128 @@
+/* ── Cart Page ──────────────────────────── */
+
+.cart-header {
+  margin-bottom: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+
+  .empty-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .item-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+  }
+
+  .item-qty {
+    font-size: 0.78rem;
+    color: #a07000;
+    font-weight: 500;
+  }
+
+  .item-price {
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #f5a623, #c47200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.total-card {
+  padding: 1rem 1.25rem;
+
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .total-label {
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .total-amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #c47200;
+  }
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.remove-btn {
+  background: rgba(255, 0, 0, 0.1);
+  border: none;
+  color: #ff4d4f;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+  background: #ff4d4f;
+  color: white;
+}
+
+.qty-input {
+  width: 50px;
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  margin-left: 6px;
+  margin-right: 10px;
+}
+
+.qty-input:focus {
+  outline: none;
+  border-color: orange;
+}
+
+.item-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

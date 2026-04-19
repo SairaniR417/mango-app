@@ -1,0 +1,93 @@
+/* ── Profile Page ───────────────────────── */
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 14px;
+  padding: 1.4rem;
+
+  .avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f5a623, #e08900);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(240,140,0,0.35);
+  }
+
+  .profile-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+  }
+
+  .profile-phone {
+    font-size: 0.88rem;
+    color: #888;
+    margin: 0;
+  }
+}
+
+.actions-card {
+  padding: 0.25rem 0;
+  margin-bottom: 14px;
+
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(245, 166, 35, 0.1);
+    transition: background 0.15s;
+
+    &:last-child { border-bottom: none; }
+
+    &:hover { background: rgba(245,166,35,0.07); }
+
+    .chevron {
+      font-size: 1.3rem;
+      color: #ccc;
+    }
+  }
+}
+
+.logout-btn {
+  margin-top: 8px;
+}
+
+/* Guest state */
+.guest-state {
+  text-align: center;
+  padding: 3rem 1rem;
+
+  .guest-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+}

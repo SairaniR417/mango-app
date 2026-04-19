@@ -1,0 +1,47 @@
+<div class="container">
+
+    <!-- Banner -->
+    <div class="banner">
+        <h2>🥭 Fresh Mangoes</h2>
+        <p>Direct from farm</p>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="🔍 Search mangoes..." [(ngModel)]="searchText" />
+    </div>
+
+    <!-- Products -->
+    <div class="products">
+
+        <div class="product" *ngFor="let p of filteredProducts()">
+            <!-- IMAGE -->
+            <div class="img-wrap">
+                <img [src]="p.image" alt="{{p.name}}" />
+
+                <!-- Floating Add Button -->
+                <button class="add-btn" (click)="add(p)">+</button>
+            </div>
+
+            <!-- INFO -->
+            <div class="info">
+                <h3>{{p.name}}</h3>
+
+                <p class="variety">{{p.variety || 'Premium Mango'}}</p>
+
+                <!-- PRICE + WEIGHT -->
+                <div class="price-row">
+                    <span class="price">₹{{p.basePrice * p.selectedWeight}}</span>
+
+                    <select [(ngModel)]="p.selectedWeight">
+                        <option *ngFor="let w of weightOptions" [ngValue]="w">
+                            {{w}} Kg
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

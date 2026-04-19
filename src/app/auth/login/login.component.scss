@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ── Full-page background ─────────────────────────────────── */
+.login-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fdf6e3 0%, #fff3cd 40%, #ffe8a0 100%);
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Card ─────────────────────────────────────────────────── */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  box-shadow:
+    0 8px 32px rgba(255, 160, 0, 0.15),
+    0 2px 8px rgba(0,0,0,0.08);
+  padding: 2.5rem 2rem;
+  animation: slideUp 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Brand section ────────────────────────────────────────── */
+.brand {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.brand-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 0.25rem;
+  filter: drop-shadow(0 4px 8px rgba(255,160,0,0.3));
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c47200;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.brand-tagline {
+  font-size: 0.82rem;
+  color: #888;
+  margin: 0.25rem 0 0;
+}
+
+/* ── Step container ────────────────────────────────────────── */
+.form-step {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.step-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 0.25rem;
+}
+
+.step-sub {
+  font-size: 0.88rem;
+  color: #777;
+  margin: 0 0 1.5rem;
+}
+
+/* ── Input group ───────────────────────────────────────────── */
+.input-group {
+  margin-bottom: 1.25rem;
+
+  label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+
+  .optional {
+    font-weight: 400;
+    color: #aaa;
+    font-size: 0.78rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e5e5e5;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fff;
+    color: #1a1a1a;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+    outline: none;
+
+    &::placeholder { color: #ccc; }
+
+    &:focus {
+      border-color: #f5a623;
+      box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.18);
+    }
+  }
+}
+
+/* ── Phone row ─────────────────────────────────────────────── */
+.phone-row {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus-within {
+    border-color: #f5a623;
+    box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.18);
+  }
+
+  .country-code {
+    padding: 0.75rem 0.85rem;
+    background: #fdf6e3;
+    font-size: 0.9rem;
+    color: #666;
+    border-right: 1.5px solid #e5e5e5;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  input {
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    flex: 1;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ── OTP input ─────────────────────────────────────────────── */
+.otp-input {
+  text-align: center;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5rem;
+  color: #c47200 !important;
+}
+
+/* ── Primary button ────────────────────────────────────────── */
+.btn-primary {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #f5a623, #e08900);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  box-shadow: 0 4px 12px rgba(240, 140, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  margin-top: 0.5rem;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(240, 140, 0, 0.45);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(240, 140, 0, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+/* ── Spinner ───────────────────────────────────────────────── */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Error / Success messages ──────────────────────────────── */
+.error-msg {
+  background: #fff3f3;
+  border: 1px solid #ffc2c2;
+  border-radius: 10px;
+  color: #d63031;
+  font-size: 0.84rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.success-msg {
+  background: #f0fff4;
+  border: 1px solid #a8edbc;
+  border-radius: 10px;
+  color: #00863a;
+  font-size: 0.84rem;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Back button ───────────────────────────────────────────── */
+.back-btn {
+  background: none;
+  border: none;
+  color: #f5a623;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  transition: color 0.15s;
+  font-family: inherit;
+
+  &:hover { color: #c47200; }
+}
+
+/* ── Resend row ────────────────────────────────────────────── */
+.resend-row {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.resend-timer {
+  font-size: 0.84rem;
+  color: #aaa;
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #f5a623;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  transition: color 0.15s;
+
+  &:hover { color: #c47200; text-decoration: underline; }
+}

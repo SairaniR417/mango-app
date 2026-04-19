@@ -1,0 +1,44 @@
+<div class="container">
+
+  <h2 class="section-title">📋 Orders</h2>
+
+  <div class="empty-state" *ngIf="orders.length === 0">
+    <span class="empty-icon">📦</span>
+    <p>No orders yet</p>
+  </div>
+
+  <div class="order-card card" *ngFor="let o of orders">
+
+    <!-- Header Row -->
+    <div class="order-header">
+      <div class="customer-info">
+        <span class="customer-name">{{ o.name }}</span>
+        <span class="customer-phone">📞 {{ o.phone }}</span>
+      </div>
+      <span class="order-status" [class]="'status-' + (o.status | lowercase)">
+        {{ o.status }}
+      </span>
+    </div>
+
+    <!-- Items -->
+    <div class="order-items">
+      <span *ngFor="let item of o.items" class="item-chip">
+        {{ item.name }} {{ item.weight ? '· ' + item.weight + 'kg' : '' }}
+      </span>
+    </div>
+
+    <!-- Address -->
+    <p class="order-address">📍 {{ o.address }}</p>
+
+    <!-- Amount + Actions -->
+    <div class="order-footer">
+      <span class="order-amount">₹{{ o.totalAmount }}</span>
+      <div class="action-btns">
+        <button class="action-btn packed" (click)="update(o, 'Packed')">Packed</button>
+        <button class="action-btn delivered" (click)="update(o, 'Delivered')">Delivered</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
